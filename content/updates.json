@@ -1,0 +1,154 @@
+{
+  "verifiedOn": "2026-10-21",
+  "members": [
+    {
+      "id": "yuquan-meng",
+      "name": ["Rainers Yuquan Meng", "孟雨泉"],
+      "role": ["Principal Investigator · Assistant Professor", "课题组负责人 · 助理教授"],
+      "initials": "YM",
+      "portrait": "assets/yuquan-meng.jpg",
+      "profile": "https://scholars.cityu.edu.hk/en/persons/yuqumeng/",
+      "orcid": "https://orcid.org/0000-0002-4818-5185",
+      "bio": ["Prof. Meng joined City University of Hong Kong in 2024. His research connects data-efficient learning, physics-informed machine learning and manufacturing process monitoring and control. He received his Ph.D. in Mechanical Engineering from the University of Illinois Urbana-Champaign in 2023 and his bachelor's degree from the University of Science and Technology of China in 2017.", "孟雨泉老师于 2024 年加入香港城市大学，研究关注数据高效学习、物理信息机器学习，以及制造过程监测与控制。他于 2023 年获得伊利诺伊大学厄巴纳－香槟分校机械工程博士学位，2017 年获得中国科学技术大学学士学位。"]
+    },
+    {
+      "id": "longjun-zhang",
+      "name": ["Longjun Zhang", "张龙骏"],
+      "role": ["Ph.D. researcher", "博士研究生"],
+      "initials": "LZ",
+      "profile": "https://scholars.cityu.edu.hk/en/persons/lzhang2323/",
+      "orcid": "https://orcid.org/0009-0003-9844-2121",
+      "bio": ["Longjun Zhang is a Ph.D. researcher in the Department of Systems Engineering at City University of Hong Kong, supervised by Prof. Rainers Yuquan Meng.", "张龙骏是香港城市大学系统工程学系博士研究生，导师为孟雨泉老师。"]
+    },
+    {
+      "id": "xiang-yang",
+      "name": ["Xiang Yang", "杨湘"],
+      "role": ["Ph.D. researcher", "博士研究生"],
+      "initials": "XY",
+      "profile": "https://scholars.cityu.edu.hk/en/persons/xiang-yang/",
+      "bio": ["Xiang Yang is a Ph.D. researcher in the Department of Systems Engineering at City University of Hong Kong, supervised by Prof. Rainers Yuquan Meng.", "杨湘是香港城市大学系统工程学系博士研究生，导师为孟雨泉老师。"]
+    },
+    {
+      "id": "yinuo-zhou",
+      "name": ["Yinuo Zhou", "周以诺"],
+      "role": ["Ph.D. researcher", "博士研究生"],
+      "initials": "YZ",
+      "profile": "https://scholars.cityu.edu.hk/en/persons/yinuzhou2/",
+      "bio": ["Yinuo Zhou is a Ph.D. researcher in the Department of Systems Engineering at City University of Hong Kong, supervised by Prof. Rainers Yuquan Meng.", "周以诺是香港城市大学系统工程学系博士研究生，导师为孟雨泉老师。"]
+    }
+  ],
+  "categories": {
+    "awards": ["Awards", "获奖荣誉"],
+    "events": ["Events", "学术活动"],
+    "projects": ["Projects", "科研项目"],
+    "publications": ["Publications", "论文发表"]
+  },
+  "news": [
+    {
+      "slug": "yinuo-zhou-entrance-scholarship",
+      "date": "2026-09-01",
+      "displayDate": ["1 September 2026", "2026 年 9 月 1 日"],
+      "dateLabel": ["Award date", "获奖日期"],
+      "category": "awards",
+      "members": ["yinuo-zhou"],
+      "title": ["Yinuo Zhou receives a graduate entrance scholarship", "周以诺获研究生入学奖学金"],
+      "excerpt": ["Congratulations to Yinuo on receiving a Chow Yei Ching School of Graduate Studies Entrance Scholarship at CityUHK.", "祝贺周以诺获得香港城市大学周亦卿研究生院入学奖学金。"],
+      "paragraphs": [
+        ["Yinuo Zhou has received a Chow Yei Ching School of Graduate Studies Entrance Scholarship from City University of Hong Kong. The university's award record gives the award date as 1 September 2026.", "周以诺获得香港城市大学周亦卿研究生院入学奖学金。城大官方获奖记录注明的获奖日期为 2026 年 9 月 1 日。"],
+        ["Yinuo is a doctoral researcher in Systems Engineering and a member of IMQ Lab. Congratulations, Yinuo, on this recognition at the beginning of your doctoral journey.", "周以诺是系统工程学系博士研究生，也是 IMQ Lab 成员。祝贺以诺在博士研究旅程中获得这一荣誉。"]
+      ],
+      "facts": [
+        [["Recipient", "获奖人"], ["Yinuo Zhou", "周以诺"]],
+        [["Awarding institution", "颁发机构"], ["City University of Hong Kong", "香港城市大学"]]
+      ],
+      "sources": [
+        {"label": ["CityUHK award record", "城大官方获奖记录"], "url": "https://scholars.cityu.edu.hk/en/prizes/chow-yei-ching-school-of-graduate-studies-entrance-scholarships-380/"}
+      ]
+    },
+    {
+      "slug": "icqsr-2026-data-challenge",
+      "date": "2026-07-05",
+      "displayDate": ["5 July 2026", "2026 年 7 月 5 日"],
+      "dateLabel": ["Award date", "获奖日期"],
+      "category": "awards",
+      "members": ["longjun-zhang", "xiang-yang", "yuquan-meng"],
+      "title": ["IMQ members receive an ICQSR 2026 Data Challenge Finalist Award", "IMQ 成员获 ICQSR 2026 数据挑战赛入围奖"],
+      "excerpt": ["Longjun Zhang, Xiang Yang and Prof. Yuquan Meng are recognised together in the university's award record.", "张龙骏、杨湘与孟雨泉老师共同获得此项荣誉，获奖信息已收录于城大官方记录。"],
+      "paragraphs": [
+        ["Congratulations to Longjun Zhang, Xiang Yang and Prof. Rainers Yuquan Meng on their Finalist Award in the Data Challenge at the 2026 INFORMS Conference on Quality, Statistics, and Reliability (ICQSR).", "祝贺张龙骏、杨湘和孟雨泉老师在 2026 年 INFORMS 质量、统计与可靠性会议（ICQSR）的数据挑战赛中获得入围奖（Finalist Award）。"],
+        ["CityUHK lists all three as recipients of the award, dated 5 July 2026, and records the recognition as international. This is a shared achievement for our doctoral researchers and their supervisor.", "城大官方记录将三人共同列为获奖者，注明获奖日期为 2026 年 7 月 5 日，并将该奖项列为国际级荣誉。这是课题组博士生与导师共同取得的成果。"]
+      ],
+      "facts": [
+        [["Recognition", "奖项"], ["Data Challenge · Finalist Award", "数据挑战赛 · 入围奖"]],
+        [["Conference", "会议"], ["INFORMS ICQSR 2026", "INFORMS ICQSR 2026"]]
+      ],
+      "sources": [
+        {"label": ["CityUHK award record", "城大官方获奖记录"], "url": "https://scholars.cityu.edu.hk/en/prizes/finalist-award-for-2026-informs-conference-on-quality-statistics-/"}
+      ]
+    },
+    {
+      "slug": "intelligent-manufacturing-seminar-2026",
+      "date": "2026-01-31",
+      "displayDate": ["31 January 2026", "2026 年 1 月 31 日"],
+      "dateLabel": ["Event date", "活动日期"],
+      "category": "events",
+      "members": ["yuquan-meng"],
+      "title": ["Prof. Meng co-organises a seminar on intelligent manufacturing", "孟老师参与组织智能制造联合研讨会"],
+      "excerpt": ["The CityU EngD Society and IMechE Hong Kong Branch joint seminar took place in Hong Kong on 31 January 2026.", "CityU EngD Society 与 IMechE 香港分会的智能制造联合研讨会于 2026 年 1 月 31 日在香港举行。"],
+      "paragraphs": [
+        ["Prof. Rainers Yuquan Meng served as a co-organiser of the joint seminar on intelligent manufacturing held by the CityU EngD Society and the Hong Kong Branch of the Institution of Mechanical Engineers (IMechE).", "孟雨泉老师担任 CityU EngD Society 与英国机械工程师学会（IMechE）香港分会智能制造联合研讨会的共同组织者。"],
+        ["The university's activity record dates the event to 31 January 2026 in Hong Kong and lists W. M. Kong as Advisory Chair. The seminar's focus connects with the lab's interest in intelligent manufacturing systems.", "城大活动记录注明，研讨会于 2026 年 1 月 31 日在香港举行，W. M. Kong 担任顾问主席。活动主题与课题组在智能制造系统方面的研究兴趣相契合。"]
+      ],
+      "facts": [
+        [["Role", "参与身份"], ["Co-organiser", "共同组织者"]],
+        [["Location", "地点"], ["Hong Kong", "香港"]]
+      ],
+      "sources": [
+        {"label": ["CityUHK activity record", "城大官方活动记录"], "url": "https://scholars.cityu.edu.hk/en/activities/hong-kong-cityu-engd-society-x-imeche-hkb-joint-seminar-on-intell/"}
+      ]
+    },
+    {
+      "slug": "ecs-smart-welding-monitoring",
+      "date": "2026-01-01",
+      "displayDate": ["1 January 2026", "2026 年 1 月 1 日"],
+      "dateLabel": ["Project start", "项目开始日期"],
+      "category": "projects",
+      "members": ["yuquan-meng"],
+      "title": ["ECS project begins on intelligent monitoring of ultrasonic welding", "超声金属焊接智能监测 ECS 项目启动"],
+      "excerpt": ["Led by Prof. Meng, the project explores interpretable learning and adaptation to changing welding conditions.", "孟老师主持的项目探索可解释学习，以及对焊接工况变化的自适应监测。"],
+      "paragraphs": [
+        ["An ECS project led by Prof. Rainers Yuquan Meng began on 1 January 2026. The project, When Machines Learn to See – A Smart Online Monitoring Approach for Ultrasonic Metal Welding, is registered at CityUHK under project number 9048328.", "孟雨泉老师主持的 ECS 项目于 2026 年 1 月 1 日启动。项目聚焦超声金属焊接的智能在线监测，城大登记项目编号为 9048328。"],
+        ["The research aims to use Kolmogorov–Arnold Networks to work with complex sensor signals, make monitoring models easier to interpret, and adapt to previously unseen process conditions. These are research objectives, with potential applications in joining dissimilar materials for electric vehicles and lightweight structures.", "项目计划利用 Kolmogorov–Arnold 网络处理复杂传感信号，提高监测模型的可解释性，并适应未见过的工艺条件。研究目标面向电动汽车和轻量化结构中的异种材料连接应用。"]
+      ],
+      "facts": [
+        [["Grant type", "资助类型"], ["ECS", "ECS"]],
+        [["Project number", "项目编号"], ["9048328", "9048328"]]
+      ],
+      "sources": [
+        {"label": ["CityUHK project record", "城大官方项目记录"], "url": "https://scholars.cityu.edu.hk/en/projects/when-machines-learn-to-see-a-smart-online-monitoring-approach-for/"}
+      ]
+    },
+    {
+      "slug": "meta-learning-tool-condition-monitoring",
+      "date": "2025-01",
+      "displayDate": ["January 2025", "2025 年 1 月"],
+      "dateLabel": ["Journal issue", "期刊出版年月"],
+      "category": "publications",
+      "members": ["yuquan-meng"],
+      "title": ["Meta-learning research published in IEEE Transactions on Industrial Informatics", "元学习研究发表于 IEEE Transactions on Industrial Informatics"],
+      "excerpt": ["A paper co-authored by Prof. Meng studies data-efficient tool condition monitoring across different welding scenarios.", "孟老师参与的论文研究如何跨焊接场景高效利用数据，实现工具状态监测。"],
+      "paragraphs": [
+        ["A paper by Yuquan Meng, Zhiqiao Dong, Kuan-Chieh Lu, Shichen Li and Chenhui Shao appears in the January 2025 issue of IEEE Transactions on Industrial Informatics, volume 21, issue 1, pages 653–662. It was first published online on 23 September 2024.", "Yuquan Meng、Zhiqiao Dong、Kuan-Chieh Lu、Shichen Li 和 Chenhui Shao 合著的论文发表于 IEEE Transactions on Industrial Informatics 2025 年 1 月刊，第 21 卷第 1 期，653–662 页。论文于 2024 年 9 月 23 日首次在线发表。"],
+        ["The study develops a similarity-based meta-representation learning approach for tool condition monitoring. It examines how knowledge learned from existing welding scenarios can transfer to other scenarios, reducing the need to collect labelled data for each new configuration.", "研究提出基于相似性的元表示学习方法，用于工具状态监测，探索如何将已有焊接场景中学到的知识迁移到其他场景，减少为每种新配置采集标注数据的需求。"]
+      ],
+      "facts": [
+        [["Journal", "期刊"], ["IEEE Transactions on Industrial Informatics", "IEEE Transactions on Industrial Informatics"]],
+        [["Volume / issue", "卷 / 期"], ["21 (1) · 653–662", "21 (1) · 653–662"]]
+      ],
+      "sources": [
+        {"label": ["CityUHK publication record", "城大官方论文记录"], "url": "https://scholars.cityu.edu.hk/en/publications/meta-learning-based-domain-generalization-for-cost-effective-tool/"},
+        {"label": ["Read the paper · DOI", "阅读论文 · DOI"], "url": "https://doi.org/10.1109/TII.2024.3456671"}
+      ]
+    }
+  ]
+}

@@ -20,16 +20,28 @@ No custom domain or DNS changes are needed. All asset paths are relative, so the
 - `docs/index.html`: lab introduction and links to the individual pages.
 - `docs/research.html`: research directions.
 - `docs/people.html`: principal investigator and doctoral researchers.
+- `docs/people/*.html`: individual profiles with related news and university profile links.
+- `docs/news.html`: news archive with topic and member filters.
+- `docs/news/*.html`: individual news articles with event dates, related people and primary sources.
 - `docs/publications.html`: publication listing, filters and citation dialog.
 - `docs/join.html`: prospective student and research assistant enquiries.
 - `docs/contact.html`: address, email and contact details.
 - `docs/publications.js`: 12 selected publications with authors, DOI and source record. Years and counts update automatically. Conference papers export as BibTeX `@inproceedings`; journal papers export as `@article`.
 - `docs/styles.css`: desktop and mobile styling.
+- `docs/updates.css`: news and member page layouts, plus navigation for seven sections.
 - `docs/app.js`: shared language switching and mobile menu, plus page-specific publication filters, citations and the home illustration. Language preferences persist across pages. Former home-page section links such as `#people` redirect to the corresponding page.
 - `docs/assets/`: favicon and supplied/verified portraits.
 - `docs/.nojekyll`: serves the website as plain static files.
 
-Each HTML page contains its own navigation and footer. When changing the navigation or footer, update all six HTML files. Only the publications page loads `publications.js`.
+Each HTML page contains static navigation and content. Only the publications page loads `publications.js`.
+
+### Adding news or updating member profiles
+
+Edit `content/updates.json`, then run `python scripts/build_updates.py` before committing. The script generates the News archive, individual articles, member profiles and the three latest stories on the home page. It also updates navigation on every top-level page. The existing contact page provides the shared header and footer for generated pages; retain its `<main id="main">` boundary. Article slugs are permanent URLs. Do not hand-edit generated articles or profiles.
+
+Each story contains bilingual text, a category, related member IDs, an event/publication date and primary source links. Use only verified facts, preserve the source's date precision (for example `2025-01` for a journal issue), and avoid attributing work to students who are not named in the source. The initial five stories and four member profiles were checked against CityUHK Scholars on 21 October 2026. Portraits are used only when available; student profiles currently use initials.
+
+The generated HTML works without JavaScript. JavaScript adds archive filtering and Chinese language switching; matching stories and counts remain consistent when switching languages.
 
 Preview locally with `python -m http.server 4174 --directory docs`, then open `http://localhost:4174/`. Use the local server to test language persistence and page-to-page navigation.
 

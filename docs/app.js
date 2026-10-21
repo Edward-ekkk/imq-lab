@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const legacyPages = {research: 'research.html', people: 'people.html', publications: 'publications.html', join: 'join.html', contact: 'contact.html'};
+  const legacyPages = {research: 'research.html', people: 'people.html', publications: 'publications.html', news: 'news.html', join: 'join.html', contact: 'contact.html'};
   if (document.body.dataset.page === 'home' && Object.hasOwn(legacyPages, location.hash.slice(1))) {
     location.replace(new URL(legacyPages[location.hash.slice(1)] + location.search, location.href));
     return;
@@ -40,7 +40,29 @@
     closeMenu();
     renderPublicationFilters();
     renderPublications();
+    filterNews();
     if (persist) { try { localStorage.setItem('imq-language', language); } catch { /* Local files and private sessions may disable storage. */ } }
+  }
+
+  function filterNews() {
+    const list = $('#news-list');
+    if (!list) return;
+    const category = $('#news-category').value;
+    const member = $('#news-member').value;
+    let visible = 0;
+    list.querySelectorAll('.news-row').forEach(row => {
+      row.hidden = !(category === 'all' || row.dataset.category === category) ||
+        !(member === 'all' || row.dataset.members.split(' ').includes(member));
+      if (!row.hidden) visible++;
+    });
+    $('#news-count').textContent = text(`${visible} ${visible === 1 ? 'story' : 'stories'}`, `${visible} 条动态`);
+    $('#news-empty').hidden = visible > 0;
+  }
+
+  if ($('.news-toolbar')) {
+    $('.news-toolbar').hidden = false;
+    $('#news-category').addEventListener('change', filterNews);
+    $('#news-member').addEventListener('change', filterNews);
   }
 
   function bibtex(paper) {
@@ -166,7 +188,7 @@
     if (event.key === 'Escape' && menu.classList.contains('open')) { closeMenu(); menuButton.focus(); }
   });
   document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
-  window.matchMedia('(min-width: 801px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+  window.matchMedia('(min-width: 921px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
   $('#close-citation')?.addEventListener('click', () => $('#citation-dialog').close());
   $('#select-citation')?.addEventListener('click', () => { $('#citation-text').focus(); $('#citation-text').select(); });
   $('#citation-dialog')?.addEventListener('click', event => {
