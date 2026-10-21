@@ -1,5 +1,10 @@
 'use strict';
 (() => {
+  const legacyPages = {research: 'research.html', people: 'people.html', publications: 'publications.html', join: 'join.html', contact: 'contact.html'};
+  if (document.body.dataset.page === 'home' && Object.hasOwn(legacyPages, location.hash.slice(1))) {
+    location.replace(new URL(legacyPages[location.hash.slice(1)] + location.search, location.href));
+    return;
+  }
   let language = 'en';
   let selectedYear = 'all';
   let toastTimer;
@@ -24,15 +29,14 @@
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', String(active));
     });
-    document.title = text('IMQ Lab · Intelligent Manufacturing & Quality Engineering · CityUHK', 'IMQ Lab · 智能制造与质量工程实验室 · 香港城市大学');
     $('#main-nav').setAttribute('aria-label', text('Main navigation', '主导航'));
     $('.language-switch').setAttribute('aria-label', text('Language', '语言'));
-    $('.publication-filters').setAttribute('aria-label', text('Filter publications by year', '按年份筛选论文'));
-    $('#close-citation').setAttribute('aria-label', text('Close citation', '关闭引用'));
-    $('#citation-text').setAttribute('aria-label', text('BibTeX citation', 'BibTeX 引用'));
-    $('#surface-title').textContent = text('Physics and data, connected', '连接物理与数据');
-    $('#surface-desc').textContent = text('A conceptual wireframe surface and sampled points, illustrating physical models and observed data. This is not experimental data.', '线框曲面与采样点示意物理模型和观测数据之间的关系；并非实验数据。');
-    $('.pi-photo img').alt = text('Prof. Rainers Yuquan Meng', '孟雨泉老师');
+    $('.publication-filters')?.setAttribute('aria-label', text('Filter publications by year', '按年份筛选论文'));
+    $('#close-citation')?.setAttribute('aria-label', text('Close citation', '关闭引用'));
+    $('#citation-text')?.setAttribute('aria-label', text('BibTeX citation', 'BibTeX 引用'));
+    if ($('#surface-title')) $('#surface-title').textContent = text('Physics and data, connected', '连接物理与数据');
+    if ($('#surface-desc')) $('#surface-desc').textContent = text('A conceptual wireframe surface and sampled points, illustrating physical models and observed data. This is not experimental data.', '线框曲面与采样点示意物理模型和观测数据之间的关系；并非实验数据。');
+    if ($('.pi-photo img')) $('.pi-photo img').alt = text('Prof. Rainers Yuquan Meng', '孟雨泉老师');
     closeMenu();
     renderPublicationFilters();
     renderPublications();
@@ -71,6 +75,7 @@
 
   function renderPublicationFilters() {
     const filters = $('.publication-filters');
+    if (!filters) return;
     const years = [...new Set(window.IMQ_PUBLICATIONS.map(paper => paper.year))].sort((a, b) => b - a);
     filters.replaceChildren();
     ['all', ...years.map(String)].forEach(year => {
@@ -84,6 +89,7 @@
 
   function renderPublications() {
     const list = $('#publication-list');
+    if (!list) return;
     list.replaceChildren();
     const visible = window.IMQ_PUBLICATIONS.filter(p => selectedYear === 'all' || String(p.year) === selectedYear);
     $('.toolbar-label').textContent = text(`${visible.length} selected publications`, `${visible.length} 篇代表论文`);
@@ -138,7 +144,7 @@
   }
 
   $$('[data-lang]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-  $('.publication-filters').addEventListener('click', event => {
+  $('.publication-filters')?.addEventListener('click', event => {
     const button = event.target.closest('button[data-year]');
     if (!button) return;
     selectedYear = button.dataset.year;
@@ -161,9 +167,9 @@
   });
   document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
   window.matchMedia('(min-width: 801px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
-  $('#close-citation').addEventListener('click', () => $('#citation-dialog').close());
-  $('#select-citation').addEventListener('click', () => { $('#citation-text').focus(); $('#citation-text').select(); });
-  $('#citation-dialog').addEventListener('click', event => {
+  $('#close-citation')?.addEventListener('click', () => $('#citation-dialog').close());
+  $('#select-citation')?.addEventListener('click', () => { $('#citation-text').focus(); $('#citation-text').select(); });
+  $('#citation-dialog')?.addEventListener('click', event => {
     const dialog = event.currentTarget;
     const bounds = dialog.getBoundingClientRect();
     if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
@@ -204,21 +210,9 @@
     });
   }
 
-  drawSurface();
+  if ($('.surface-visual')) drawSurface();
   let initialLanguage = 'en';
   try { initialLanguage = localStorage.getItem('imq-language') || 'en'; } catch { /* Storage is optional. */ }
   setLanguage(initialLanguage, false);
   $('#copyright-year').textContent = new Intl.DateTimeFormat('en', {year:'numeric',timeZone:'Asia/Hong_Kong'}).format(new Date());
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) $$('.main-nav a').forEach(link => {
-          const current = link.hash === `#${entry.target.id}`;
-          link.classList.toggle('current', current);
-          if (current) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current');
-        });
-      });
-    }, {rootMargin:'-20% 0px -60% 0px'});
-    $$('main section[id]').forEach(section => observer.observe(section));
-  }
 })();

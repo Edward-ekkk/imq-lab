@@ -4,25 +4,34 @@ Website for the Intelligent Manufacturing and Quality Engineering Lab, led by Pr
 
 ## GitHub Pages deployment
 
-This repository is ready for a free **public** GitHub repository such as `imq-lab`.
+Live website: **https://edward-ekkk.github.io/imq-lab/**
+
+This public repository publishes its `main` branch and `/docs` directory to GitHub Pages. Push a commit to update the live site.
 
 1. Push these files to the repository's `main` branch.
 2. In **Settings → Pages**, select **Deploy from a branch**.
 3. Select **main** and **/docs**, then save.
 4. Wait for the Pages deployment to complete. GitHub displays the actual published URL in Settings → Pages.
 
-A project repository named `imq-lab` normally uses `https://YOUR-USERNAME.github.io/imq-lab/`. This is a URL pattern, not a deployed website. No custom domain or DNS changes are needed. All asset paths are relative, so project URLs are supported.
+No custom domain or DNS changes are needed. All asset paths are relative, so the `/imq-lab/` project URL and direct links to individual pages are supported.
 
 ## Editing
 
-- `docs/index.html`: lab introduction, research areas, people, contact and bilingual copy.
+- `docs/index.html`: lab introduction and links to the individual pages.
+- `docs/research.html`: research directions.
+- `docs/people.html`: principal investigator and doctoral researchers.
+- `docs/publications.html`: publication listing, filters and citation dialog.
+- `docs/join.html`: prospective student and research assistant enquiries.
+- `docs/contact.html`: address, email and contact details.
 - `docs/publications.js`: 12 selected publications with authors, DOI and source record. Years and counts update automatically. Conference papers export as BibTeX `@inproceedings`; journal papers export as `@article`.
 - `docs/styles.css`: desktop and mobile styling.
-- `docs/app.js`: language switching, publication filters, citations and navigation.
+- `docs/app.js`: shared language switching and mobile menu, plus page-specific publication filters, citations and the home illustration. Language preferences persist across pages. Former home-page section links such as `#people` redirect to the corresponding page.
 - `docs/assets/`: favicon and supplied/verified portraits.
 - `docs/.nojekyll`: serves the website as plain static files.
 
-Preview locally by opening `docs/index.html` or running `python -m http.server 4174 --directory docs`.
+Each HTML page contains its own navigation and footer. When changing the navigation or footer, update all six HTML files. Only the publications page loads `publications.js`.
+
+Preview locally with `python -m http.server 4174 --directory docs`, then open `http://localhost:4174/`. Use the local server to test language persistence and page-to-page navigation.
 
 ## Content
 
